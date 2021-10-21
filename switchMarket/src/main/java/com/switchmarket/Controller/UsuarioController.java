@@ -1,4 +1,4 @@
-package com.switchmarket;
+package com.switchmarket.Controller;
 
 import com.switchmarket.Entities.Usuario;
 import com.switchmarket.Enums.estadoEnum;
