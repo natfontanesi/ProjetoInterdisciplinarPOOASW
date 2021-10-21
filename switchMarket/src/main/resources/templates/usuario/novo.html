@@ -1,0 +1,58 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuários</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1> Novo Usuário</h1>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+<form action=" /usuarios" method="post">
+    <div class=" mb-3">
+        <label class="form-label">Nome</label>
+        <input class="form-control" type="text" name="nome">
+        <div></div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">email</label>
+        <input class="form-control" type="text" name="email">
+        <div></div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">senha</label>
+        <input class="form-control" type="text" name="senha">
+        <div></div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">CPF</label>
+        <input class="form-control" type="text" name="cpf">
+        <div></div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Cidade</label>
+        <input class="form-control" type="text" name="cidade">
+        <div></div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Estado</label>
+        <select class="form-select" nome="estadoEnum">
+            <option th:each="estado : ${com.switchmarket.Enums.estadoEnum}"
+                    th:value="${estado}" th:text="${estado}"></option>
+
+        </select>
+    </div>
+    <button clas="btn btn-primary" type="submit">Submeter</button>
+    <a href="javascript:history.back()">Voltar</a>
+
+</form>
+</div>
+</div>
+</body>
+</html>
