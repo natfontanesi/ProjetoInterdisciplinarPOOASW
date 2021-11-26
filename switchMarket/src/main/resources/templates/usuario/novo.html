@@ -13,46 +13,47 @@
 </div>
 
 <div class="container">
-<div class="row">
-<form action=" /usuarios" method="post">
-    <div class=" mb-3">
-        <label class="form-label">Nome</label>
-        <input class="form-control" type="text" name="nome">
-        <div></div>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">email</label>
-        <input class="form-control" type="text" name="email">
-        <div></div>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">senha</label>
-        <input class="form-control" type="text" name="senha">
-        <div></div>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">CPF</label>
-        <input class="form-control" type="text" name="cpf">
-        <div></div>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Cidade</label>
-        <input class="form-control" type="text" name="cidade">
-        <div></div>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Estado</label>
-        <select class="form-select" nome="estadoEnum">
-            <option th:each="estado : ${com.switchmarket.Enums.estadoEnum}"
-                    th:value="${estado}" th:text="${estado}"></option>
+    <div class="row">
+        <form action=" /usuarios" method="POST">
+            <div class=" mb-3">
+                <label class="form-label">Nome</label>
+                <input class="form-control" type="text" name="nome">
+                <div></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">email</label>
+                <input class="form-control" type="text" name="email">
+                <div></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">senha</label>
+                <input class="form-control" type="text" name="senha">
+                <div></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CPF</label>
+                <input class="form-control" type="text" name="cpf">
+                <div></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cidade</label>
+                <input class="form-control" type="text" name="cidade">
+                <div></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Estado</label>
+                <select class="form-select" nome="estadoEnum">
+                    <option th:each="estado : ${estado.values}"
+                            th:value="${estado}" th:text="${estado}">
+                    </option>
 
-        </select>
-    </div>
-    <button clas="btn btn-primary" type="submit">Submeter</button>
-    <a href="javascript:history.back()">Voltar</a>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit">Submeter</button>
+            <a href="javascript:history.back()">Voltar</a>
 
-</form>
-</div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
